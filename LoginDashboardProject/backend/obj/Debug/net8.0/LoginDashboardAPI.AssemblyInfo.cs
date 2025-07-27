@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LoginDashboardAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74cdc6b274babda37748ac10b2343266573e5d8e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3d60d1e38433abd9fdf75ca5221f15ba403a458")]
 [assembly: System.Reflection.AssemblyProductAttribute("LoginDashboardAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LoginDashboardAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

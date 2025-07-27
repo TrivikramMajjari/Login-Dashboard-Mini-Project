@@ -1,105 +1,95 @@
-# Login & Dashboard Mini Project
+# Login Dashboard Mini Project
 
-## Overview
+Welcome! This is a simple, modern full-stack project to help you learn and demo a login system and dashboard using a .NET backend and Angular frontend.
 
-This project is a simple login and dashboard application built using a .NET Core backend and an Angular frontend. The application allows users to log in and view a dashboard with chart data.
+---
 
 ## Project Structure
 
 ```
-LoginDashboardProject
-├── backend
-│   ├── Controllers
-│   ├── Models
-│   ├── Services
-│   ├── Middleware
-│   ├── Program.cs
-│   ├── appsettings.json
-│   └── appsettings.Development.json
-├── frontend
-│   ├── src
-│   │   ├── app
-│   │   ├── environments
-│   │   ├── index.html
-│   │   └── styles.scss
-│   ├── angular.json
-│   ├── package.json
-│   └── tsconfig.json
-├── .gitignore
-└── README.md
+Login-Dashboard-Mini-Project/
+└── LoginDashboardProject/
+    ├── backend/    # .NET 8 Web API
+    ├── frontend/   # Angular app
+    └── README.md
 ```
+
+---
 
 ## Features
 
-1. **Login Page**: 
-   - Users can enter their username and password.
-   - On successful login, users are redirected to the dashboard.
-   - Basic error messages are displayed for invalid login attempts.
+- User login with JWT authentication
+- Dashboard with chart data
+- Rate limiting middleware for security
+- Modern Angular UI
 
-2. **Dashboard Page**: 
-   - Displays a chart using hardcoded data (e.g., ticket count by status or sales data).
-   - Utilizes a charting library for visualization.
-
-## Backend
-
-- Built using .NET Core.
-- Implements APIs for user authentication and dashboard data retrieval.
-- Includes a rate-limiting mechanism for the login API to prevent brute force attacks.
-- Returns an authentication token upon successful login, which is validated in protected API calls.
-
-## Frontend
-
-- Developed using Angular.
-- Contains components for login and dashboard functionalities.
-- Uses services to handle API calls and manage authentication.
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-- .NET Core SDK
-- Node.js and npm
-- Angular CLI
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [Node.js (v16+ recommended)](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
 
-### Installation
+### 1. Clone the Repository
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd LoginDashboardProject
-   ```
+```bash
+git clone <repo-url>
+cd Login-Dashboard-Mini-Project/LoginDashboardProject
+```
 
-2. Set up the backend:
-   - Navigate to the `backend` directory.
-   - Restore dependencies:
-     ```
-     dotnet restore
-     ```
-   - Run the backend:
-     ```
-     dotnet run
-     ```
+### 2. Install Dependencies
 
-3. Set up the frontend:
-   - Navigate to the `frontend` directory.
-   - Install dependencies:
-     ```
-     npm install
-     ```
-   - Run the frontend:
-     ```
-     ng serve
-     ```
+Backend:
+```bash
+cd backend
+dotnet restore
+```
 
-### Usage
+Frontend:
+```bash
+cd ../frontend
+npm install
+```
 
-- Access the application at `http://localhost:4200`.
-- Use the login form to authenticate and access the dashboard.
+### 3. Run the App
+
+**Backend:**
+```bash
+cd backend
+dotnet run
+```
+
+**Frontend:**
+```bash
+cd frontend
+npx ng serve --host 0.0.0.0 --disable-host-check
+```
+
+Or use the VS Code tasks: `Run .NET Backend` and `Run Angular Frontend`.
+
+---
+
+## Access
+
+- Frontend: [http://localhost:4200](http://localhost:4200)
+- Backend API: [http://localhost:5000](http://localhost:5000) (default)
+
+---
+
+## Configuration & Tips
+
+- Backend config: `backend/appsettings.json`, `appsettings.Development.json`
+- Frontend API proxy: `frontend/proxy.conf.json`
+- If you see OpenSSL errors, the frontend uses `--openssl-legacy-provider` for compatibility.
+- Make sure ports 4200 (frontend) and 5000 (backend) are open.
+
+---
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+Pull requests and suggestions are welcome! If you spot a bug or want to add a feature, just open an issue or PR.
 
-## License
-
-This project is licensed under the MIT License.
+---
